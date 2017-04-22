@@ -1,0 +1,42 @@
+.wrapper {
+    text-align: center;
+}
+
+.button {
+    position: absolute;
+    margin: auto;
+    top:40%;
+}
+@media screen and (max-width: 480px){
+	.imgDiv{
+		margin-top: -1%;
+	}
+}
+@media screen and (min-width: 480px) and (max-width: 768px){
+	.imgDiv{
+		margin-top: -1%;
+	}
+}
+@media screen and (min-width: 768px){
+	.imgDiv{
+		margin-top: -3%;
+	}
+}
+.start{
+	padding:0px;margin-top:50px;
+}
+.sidebar{
+	background-color:#ffc125;
+}
+.sidebar .ng-scope{
+	padding:2%;height:auto;border-bottom: 1px solid white;
+}
+.rightSection{
+	padding:20px;background-color:#305050;color:white;height:692px; 
+}
+.rightSection .imgDiv{
+	width:100px;height:100px;border-radius:50%;margin: 4% 41%;border: 2px solid;
+}
+.rightSection .imgDiv img{
+	width:100px;height:100px;
+}
