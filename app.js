@@ -1,5 +1,5 @@
 var app = angular.module("app", []);
-var API_URL = 'http://api.openweathermap.org/data/';
+var API_URL = 'https://api.openweathermap.org/data/';
 var FORECAST_URL = API_URL+'2.5/forecast/daily?'; 
 app.controller('fooCtrl', function($scope,$http){
   $scope.dataLoaded=false;
