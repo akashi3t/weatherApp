@@ -20,7 +20,7 @@ app.controller('fooCtrl', function($scope,$http){
         $scope.list = $scope.reports.list;
         console.log($scope.list);
         $scope.date = $scope.list[0].dt;
-        $scope.imgSrc = 'http://openweathermap.org/img/w/'+$scope.list[0].weather[0].icon+'.png';
+        $scope.imgSrc = 'https://openweathermap.org/img/w/'+$scope.list[0].weather[0].icon+'.png';
         $scope.temp = $scope.list[0].temp.day+'º';
         $scope.desc = $scope.list[0].weather[0].description;
         $scope.daymax = $scope.list[0].temp.max+'º';
@@ -37,7 +37,7 @@ app.controller('fooCtrl', function($scope,$http){
   }
   $scope.showFullContent = function (get_index) {
     $scope.date = $scope.list[get_index].dt;
-    $scope.imgSrc = 'http://openweathermap.org/img/w/'+$scope.list[get_index].weather[0].icon+'.png';
+    $scope.imgSrc = 'https://openweathermap.org/img/w/'+$scope.list[get_index].weather[0].icon+'.png';
     $scope.temp = $scope.list[get_index].temp.day+'º';
     $scope.desc = $scope.list[get_index].weather[0].description;
     $scope.daymax = $scope.list[get_index].temp.max+'º';
@@ -64,7 +64,7 @@ app.controller('fooCtrl', function($scope,$http){
     });
   }
   function get_city(cb){
-    $http.get('http://ipinfo.io').then((responce)=>{
+    $http.get('https://ipinfo.io').then((responce)=>{
      return cb(responce);  
     });
   }
