@@ -22,13 +22,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">To Do </a>
+          <a class="navbar-brand" href="#">Weather Report</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">Home</a></li>
-            <li><a href="#aboutApp">About the app</a></li>
-            <li><a href="#aboutAuthor">Author</a></li>
+            
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -43,20 +42,17 @@
           <p><img ng-src="http://openweathermap.org/img/w/{{dates.weather[0].icon}}.png"></p><p style="font-size:20px;"><b>{{dates.temp.day}}º<sup>C</sup></b></p> </div>
         </div>
       </div>
-      <div class="col-lg-8 rightSection" style="padding:20px;background-color:#305050;color:white;height:692px;">
+      <div class="col-lg-8 loading-img" ng-hide = "dataLoaded"><img ng-src="img/loading.gif"></div>
+      <div class="col-lg-8 rightSection" ng-show = "dataLoaded" >
       <div class="col-lg-12 imgDiv">
-      <p align="center">
-      <img style="position: absolute;
-    margin: auto;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;" ng-src={{imgSrc}}></p></div>
+        <p align="center">
+        <img style="" ng-src={{imgSrc}}></p>
+      </div>
       <div class="col-lg-12">
         <h1><b>{{temp}}</b></h1>
       </div>
       <div class="col-lg-12">
-        <h4><b>{{desc}}</b></h4>
+        <h4><b style="background: black;padding: 2%;opacity: .7;border:1px white dotted;">{{desc | uppercase}}</b></h4>
       </div>
       <div class="col-lg-12">
         <h3>Humidity : <b>{{humid}}%</b></h3>
